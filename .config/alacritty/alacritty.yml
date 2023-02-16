@@ -20,7 +20,7 @@ env:
   # This value is used to set the `$TERM` environment variable for
   # each instance of Alacritty. If it is not present, alacritty will
   # check the local terminfo database and use `alacritty` if it is
-  # available, otherwise `xterm-256color` is used.
+  # available, otherwise `xterm-256solor` is used.
   TERM: xterm-256color
 
 window:
@@ -67,7 +67,7 @@ window:
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 0.85
+  opacity: 0.98
 
   # Startup Mode (changes require restart)
   #
@@ -117,7 +117,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Iosevka Medium Extended
+    family: Menlo
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
@@ -156,7 +156,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 17
+  size: 15
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -189,6 +189,173 @@ font:
 #draw_bold_text_with_bright_colors: false
 # Colors (Tomorrow Night)
 schemes:
+  
+  gruvbox_material: &gruvbox_material
+    primary:
+      background: '#1d2021'
+      foreground: '#dfbf8e'
+
+    normal:
+      black:   '#665c54'
+      red:     '#ea6962'
+      green:   '#a9b665'
+      yellow:  '#e78a4e'
+      blue:    '#7daea3'
+      magenta: '#d3869b'
+      cyan:    '#89b482'
+      white:   '#dfbf8e'
+
+    bright:
+      black:   '#928374'
+      red:     '#ea6962'
+      green:   '#a9b665'
+      yellow:  '#e3a84e'
+      blue:    '#7daea3'
+      magenta: '#d3869b'
+      cyan:    '#89b482'
+      white:   '#dfbf8e'
+
+  gruvbox_material_hard_dark: &gruvbox_material_hard_dark
+    primary:
+      background: '#1d2021'
+      foreground: '#d4be98'
+
+    normal:
+      black:   '#32302f'
+      red:     '#ea6962'
+      green:   '#a9b665'
+      yellow:  '#d8a657'
+      blue:    '#7daea3'
+      magenta: '#d3869b'
+      cyan:    '#89b482'
+      white:   '#d4be98'
+
+    bright:
+      black:   '#32302f'
+      red:     '#ea6962'
+      green:   '#a9b665'
+      yellow:  '#d8a657'
+      blue:    '#7daea3'
+      magenta: '#d3869b'
+      cyan:    '#89b482'
+      white:   '#d4be98'
+
+  gruvbox_material_medium_dark: &gruvbox_material_medium_dark
+    primary:
+      background: '#282828'
+      foreground: '#d4be98'
+
+    normal:
+      black:   '#3c3836'
+      red:     '#ea6962'
+      green:   '#a9b665'
+      yellow:  '#d8a657'
+      blue:    '#7daea3'
+      magenta: '#d3869b'
+      cyan:    '#89b482'
+      white:   '#d4be98'
+
+    bright:
+      black:   '#3c3836'
+      red:     '#ea6962'
+      green:   '#a9b665'
+      yellow:  '#d8a657'
+      blue:    '#7daea3'
+      magenta: '#d3869b'
+      cyan:    '#89b482'
+      white:   '#d4be98'
+
+  gruvbox_material_soft_dark: &gruvbox_material_soft_dark
+    primary:
+      background: '#32302f'
+      foreground: '#d4be98'
+
+    normal:
+      black:   '#45403d'
+      red:     '#ea6962'
+      green:   '#a9b665'
+      yellow:  '#d8a657'
+      blue:    '#7daea3'
+      magenta: '#d3869b'
+      cyan:    '#89b482'
+      white:   '#d4be98'
+
+    bright:
+      black:   '#45403d'
+      red:     '#ea6962'
+      green:   '#a9b665'
+      yellow:  '#d8a657'
+      blue:    '#7daea3'
+      magenta: '#d3869b'
+      cyan:    '#89b482'
+      white:   '#d4be98'
+
+  gruvbox_material_hard_light: &gruvbox_material_hard_light
+    primary:
+      background: '#f9f5d7'
+      foreground: '#654735'
+    normal:
+      black:   '#654735'
+      red:     '#c14a4a'
+      green:   '#6c782e'
+      yellow:  '#b47109'
+      blue:    '#45707a'
+      magenta: '#945e80'
+      cyan:    '#4c7a5d'
+      white:   '#f2e5bc'
+    bright:
+      black:   '#654735'
+      red:     '#c14a4a'
+      green:   '#6c782e'
+      yellow:  '#b47109'
+      blue:    '#45707a'
+      magenta: '#945e80'
+      cyan:    '#4c7a5d'
+      white:   '#f2e5bc'
+  gruvbox_material_medium_light: &gruvbox_material_medium_light
+    primary:
+      background: '#fbf1c7'
+      foreground: '#654735'
+    normal:
+      black:   '#654735'
+      red:     '#c14a4a'
+      green:   '#6c782e'
+      yellow:  '#b47109'
+      blue:    '#45707a'
+      magenta: '#945e80'
+      cyan:    '#4c7a5d'
+      white:   '#eee0b7'
+    bright:
+      black:   '#654735'
+      red:     '#c14a4a'
+      green:   '#6c782e'
+      yellow:  '#b47109'
+      blue:    '#45707a'
+      magenta: '#945e80'
+      cyan:    '#4c7a5d'
+      white:   '#eee0b7'
+  gruvbox_material_soft_light: &gruvbox_material_soft_light
+    primary:
+      background: '#f2e5bc'
+      foreground: '#654735'
+    normal:
+      black:   '#654735'
+      red:     '#c14a4a'
+      green:   '#6c782e'
+      yellow:  '#b47109'
+      blue:    '#45707a'
+      magenta: '#945e80'
+      cyan:    '#4c7a5d'
+      white:   '#e6d5ae'
+    bright:
+      black:   '#654735'
+      red:     '#c14a4a'
+      green:   '#6c782e'
+      yellow:  '#b47109'
+      blue:    '#45707a'
+      magenta: '#945e80'
+      cyan:    '#4c7a5d'
+      white:   '#e6d5ae'
 
   kanagawa: &kanagawa
     primary:
@@ -273,7 +440,7 @@ schemes:
   ### Catppuccin ###
   catpuccin: &catpuccin
     primary:
-      background: '#1E1D2F'
+      background: '#1e1d2f'
       foreground: '#D9E0EE'
     cursor:
       text: '#1E1D2F'
@@ -400,11 +567,15 @@ schemes:
 ### Available themes are: ###
 # doom-one
 # dracula
-# catppuccin
 # nord
 # darkplus
 # onedark
 # tokyonight
 # kanagawa
+# catpuccin
+# gruvbox_material_hard_dark
+# gruvbox_material_medium_dark
+# gruvbox_material_soft_dark
+# gruvbox_material_hard_light
 
-colors: *catpuccin
+colors: *gruvbox_material
